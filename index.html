@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visão geral — Toque</title>
+  <link rel="stylesheet" href="style.css" defer>
+</head>
+<body>
+<div class="app">
+  <!-- ===== Sidebar ===== -->
+  <nav class="sidebar" aria-label="Menu principal">
+    <a class="brand" href="visao-geral.html" aria-label="Toque — ir para a página inicial">
+      <span class="brand_mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 8.5a8 8 0 0 1 12 0"/><path d="M8.5 12a4.5 4.5 0 0 1 7 0"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/></svg>
+      </span>
+      <span class="brand_name">Toque</span>
+    </a>
+
+    <!-- ===== Atributos do SVG é apenas para definir o tamanho da imagem vetorizada e manter a cor não precisa se preocupar em usar ===== -->
+    <div class="nav">
+      <a class="nav_item" href="visao-geral.html" aria-current="page">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
+        Visão geral
+      </a>
+      <a class="nav_item" href="#estabelecimentos">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+        Estabelecimentos
+      </a>
+      <a class="nav_item" href="editor-placa.html">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg>
+        Placas e QR
+      </a>
+      <a class="nav_item" href="#gravar">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+        Gravar tag
+      </a>
+      <a class="nav_item" href="#config">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+        Configurações
+      </a>
+    </div>
+
+    <div class="sidebar_status">
+      <div class="sidebar_status-label">Domínio curto</div>
+      <div class="sidebar_status-domain">lmk.to</div>
+      <div class="status-dot status-dot-ok">Redirect operando</div>
+    </div>
+  </nav>
+
+  <!-- ===== Conteúdo ===== -->
+  <main class="main">
+
+    <header class="page-header">
+      <div class="page-header_titles">
+        <h1>Visão geral</h1>
+        <p class="page-header_sub">Últimos 30 dias · atualizado há 3 min</p>
+      </div>
+      <div class="page-header_actions">
+        <label class="field" for="establishment">Estabelecimento</label>
+        <select class="select" id="establishment" name="establishment">
+          <option>Padaria Bela Vista — Centro</option>
+          <option>Padaria Bela Vista — Shopping</option>
+          <option>Todos os estabelecimentos</option>
+        </select>
+        <a class="btn btn-primary" href="editor-placa.html">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          Nova placa
+        </a>
+      </div>
+    </header>
+
+    <!-- Gráfico -->
+    <section class="graph" aria-label="Indicadores">
+      <article class="card graph">
+        <h2 class="graph_label">Toques NFC</h2>
+        <p class="graph_value">1.284</p>
+        <p class="graph_delta">+18% vs. mês anterior</p>
+      </article>
+      <article class="card graph">
+        <h2 class="graph_label">Scans de QR</h2>
+        <p class="graph_value">412</p>
+        <p class="graph_delta">+6% vs. mês anterior</p>
+      </article>
+      <article class="card graph">
+        <h2 class="graph_label">Nota no Google</h2>
+        <p class="graph_value">
+          4,7
+          <svg aria-hidden="true" class="kpi_star" width="22" height="22" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg>
+        </p>
+        <p class="graph_delta">+0,2 desde a instalação das placas</p>
+      </article>
+      <article class="card graph">
+        <h2 class="graph_label">Avaliações no Google</h2>
+        <p class="graph_value">318</p>
+        <p class="graph_delta">+41 novas nos últimos 30 dias</p>
+      </article>
+    </section>
+
+    <!-- Gráfico com a origem -->
+    <section class="row row-chart">
+
+      <article class="card card-chart">
+        <header class="card_head">
+          <h2 class="card_title">Toques e scans por dia</h2>
+          <ul class="legend">
+            <li class="legend_item legend_item-nfc">NFC</li>
+            <li class="legend_item legend_item-qr">QR</li>
+          </ul>
+        </header>
+    
+    <!-- Utilizar css pra simular o gráfico // Pesquisar sobre nth-child, vai ter que usar. Se não conseguirem podem deixar que eu arrumo no final -->
+       <div class="bars" role="img" aria-label="Gráfico de barras: toques NFC e scans QR nos últimos 14 dias">
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+            <div class="bar"><span class="bar_qr"></span><span class="bar_nfc"></span></div>
+        </div>
+
+        <div class="axis">
+          <span>22 out</span>
+          <span>29 out</span>
+          <span>4 nov</span>
+        </div>
+      </article>
+
+      <article class="card card-origin">
+        <h2 class="card_title">Origem dos acessos</h2>
+
+        <div class="progress">
+          <div class="progress_label"><span>NFC (toque)</span><strong>76%</strong></div>
+          <div class="progress_track"><div class="progress_fill progress_fill-nfc" data-value="76"></div></div>
+        </div>
+        <div class="progress">
+          <div class="progress_label"><span>QR code</span><strong>24%</strong></div>
+          <div class="progress_track"><div class="progress_fill progress_fill-qr" data-value="24"></div></div>
+        </div>
+
+        <dl class="stats">
+          <div class="stat">
+            <dt>Placa com mais toques</dt>
+            <dd>Balcão do caixa</dd>
+            <dd class="stat_detail">388 toques · 30 dias</dd>
+          </div>
+          <div class="stat">
+            <dt>Horário de pico</dt>
+            <dd>Sábado, 10h–12h</dd>
+          </div>
+        </dl>
+      </article>
+    </section>
+
+    <!-- Placas instaladas -->
+    <section class="card table-card">
+      <header class="table-card_head">
+        <h2 class="card_title">Placas instaladas</h2>
+        <a class="table-card_link" href="editor-placa.html">Ver todas</a>
+      </header>
+
+      <div class="table-scroll">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Placa</th>
+              <th scope="col">Link curto</th>
+              <th scope="col">Modelo</th>
+              <th scope="col" class="num">Toques 7d</th>
+              <th scope="col" class="num">Scans 7d</th>
+              <th scope="col">Tag NFC</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table_name">Balcão do caixa</td>
+              <td class="table_mono">lmk.to/bv7k2</td>
+              <td class="table_muted">Placa de mesa</td>
+              <td class="num">96</td>
+              <td class="num">31</td>
+              <td><span class="badge badge-success">Gravada · travada</span></td>
+            </tr>
+            <tr>
+              <td class="table_name">Mesa 1</td>
+              <td class="table_mono">lmk.to/bv7k3</td>
+              <td class="table_muted">Adesivo</td>
+              <td class="num">44</td>
+              <td class="num">12</td>
+              <td><span class="badge badge-success">Gravada · travada</span></td>
+            </tr>
+            <tr>
+              <td class="table_name">Mesa 2</td>
+              <td class="table_mono">lmk.to/bv7k4</td>
+              <td class="table_muted">Adesivo</td>
+              <td class="num">39</td>
+              <td class="num">9</td>
+              <td><span class="badge badge-success">Gravada · travada</span></td>
+            </tr>
+            <tr>
+              <td class="table_name">Cartão do entregador</td>
+              <td class="table_mono">lmk.to/bv7k5</td>
+              <td class="table_muted">Cartão</td>
+              <td class="num">—</td>
+              <td class="num">—</td>
+              <td><a class="badge badge-warning" href="#gravar">Aguardando gravação</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
