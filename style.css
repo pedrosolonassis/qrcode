@@ -18,7 +18,7 @@ h1, h2, p, dl, dd, ul { margin: 0; }
 }
 
 /* 3. menu topo*/
-.sidebar {
+.navigation {
     display: flex; align-items: center; gap: 32px;
     padding: 12px 24px;
     background: #FFFFFF; border-bottom: 1px solid #E2E8F0;
@@ -38,13 +38,6 @@ h1, h2, p, dl, dd, ul { margin: 0; }
     background: #CCFBF1;
     color: #0F766E;
     font-weight: 600;
-}
-
-.nav_item[href="#estabelecimentos"],
-.nav_item[href="#gravar"],
-.nav_item[href="#config"],
-.sidebar_status {
-    display: none;
 }
 
 /* 4. cabeçalho */
@@ -78,7 +71,7 @@ section.graph { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
 .graph_label { color: #64748B; }
 .graph_value { display: flex; align-items: center; gap: 8px; font-size: 32px; font-weight: 700; }
 .graph_delta { font-size: 12px; color: #15803D; }
-.kpi_star { fill: #F59E0B; }
+.graph_star { fill: #F59E0B; }
 
 /* 7. grafico */
 .row-chart { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
