@@ -1,0 +1,39 @@
+DOCUMENTAÇÃO
+
+Aplicação Front-end: Sistema de Geração de QRCode e link de tag de NFC.
+
+https://github.com/pedrosolonassis/qrcode 
+
+Equipe:
+
+- Geraldo Iberê Frazão
+- Jordan Henrique Fernandes
+- José Eduardo Coutinho
+- Miguel Emanoel Carvalho
+- Pedro Solon Assis
+
+Objetivo Geral:
+
+Desenvolver uma aplicação web que demonstre compreensão dos principais conceitos HTML, CSS e JavaScript.
+
+Objetivos Específicos:
+
+-> Facilitar a integração da satisfação do cliente com a avaliação google do estabelecimento;  
+-> Demonstrar, por meio de dados com gráfico, o número de toques por dia no QRCode e no NFC;  
+-> Estilizar o QRCode da placa/adesivo;  
+-> Sumarizar os principais dados na página inicial, como avaliação atual, médias, toques e scan.
+
+Regras do Negócio:
+
+Esse projeto visa colaborar com os comércios e estabelecimentos que buscam monitorar e alavancar sua avaliação na plataforma Google. Desse modo, a proposta é gerar insights para o cliente, de forma didática, intuitiva e visual, que proporcione uma melhor tomada de decisão. Destarte, a aplicação se baseia na:  
+
+-> Análise de dados do número de toques por dia;
+-> Nota do avaliador, quais ações o cliente pode tomar;
+-> Acessibilidade geral e facilidade de avaliação;
+-> Origem do acesso do avaliador (balcão e/ou mesa).
+
+Frameworks e Bibliotecas:
+
+-> HTML;  
+-> CSS;  
+-> JavaScript.
