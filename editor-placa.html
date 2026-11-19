@@ -52,20 +52,21 @@
     <main class="main">
 
     <header class="page-header">
-      <div>
-        <nav aria-label="Caminho de navegação">
-          <ol class="breadcrumb page-header_sub">
-            <li><a href="#estabelecimentos">Padaria Bela Vista</a></li>
-            <li><a href="#centro">Centro</a></li>
-            <li aria-current="page">Placas</li>
-          </ol>
-        </nav>
-        <h1>Nova placa: Mesa 3</h1>
+      <div class="page-header_titles">
+        <h1>Visão geral</h1>
+        <p class="page-header_sub">Últimos 30 dias · atualizado há 3 min</p>
       </div>
-
       <div class="page-header_actions">
-        <button type="button" class="btn btn-secondary">Salvar rascunho</button>
-        <button type="button" class="btn btn-primary">Gravar tag NFC</button>
+        <label class="field" for="establishment">Estabelecimento</label>
+        <select class="select" id="establishment" name="establishment">
+          <option>Padaria Bela Vista — Centro</option>
+          <option>Padaria Bela Vista — Shopping</option>
+          <option>Todos os estabelecimentos</option>
+        </select>
+        <a class="btn btn-primary" href="editor-placa.html">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          Nova placa
+        </a>
       </div>
     </header>
 
