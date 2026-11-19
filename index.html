@@ -7,40 +7,41 @@
   <link rel="stylesheet" href="style.css" defer>
 </head>
 <body>
-<div class="app">
-  <!-- ===== Header ===== -->
-  <nav class="navigation" aria-label="Menu principal">
-    <a class="brand" href="visao-geral.html" aria-label="Toque — ir para a página inicial">
-      <span class="brand_mark" aria-hidden="true">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 8.5a8 8 0 0 1 12 0"/><path d="M8.5 12a4.5 4.5 0 0 1 7 0"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/></svg>
-      </span>
-      <span class="brand_name">Toque</span>
-    </a>
-
-    <!-- ===== Atributos do SVG é apenas para definir o tamanho da imagem vetorizada e manter a cor não precisa se preocupar em usar ===== -->
-    <div class="nav">
-      <a class="nav_item" href="visao-geral.html" aria-current="page">
-        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
-        Visão geral
+  <div class="app">
+    <!-- ===== Header ===== -->
+    <div class="app"> <!-- Classe futura para migração para React -->
+    <nav class="navigation" aria-label="Menu principal">
+      <a class="brand" href="index.html" aria-label="Toque — ir para a página inicial">
+        <span class="brand_mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 8.5a8 8 0 0 1 12 0"/><path d="M8.5 12a4.5 4.5 0 0 1 7 0"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/></svg>
+        </span>
+        <span class="brand_name">Toque</span>
       </a>
-      <a class="nav_item" href="#estabelecimentos">
-        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
-        Estabelecimentos
-      </a>
-      <a class="nav_item" href="editor-placa.html">
-        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg>
-        Placas e QR
-      </a>
-      <a class="nav_item" href="#gravar">
-        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
-        Gravar tag
-      </a>
-      <a class="nav_item" href="#config">
-        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
-        Configurações
-      </a>
-    </div>
-  </nav>
+      
+      <!-- ===== Atributos do SVG é apenas para definir o tamanho da imagem vetorizada e manter a cor não precisa se preocupar em usar ===== -->
+      <div class="nav">
+        <a class="nav_item" href="index.html">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
+          Visão geral
+        </a>
+        <a class="nav_item" href="#estabelecimentos">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+          Estabelecimentos
+        </a>
+        <a class="nav_item" href="editor-placa.html">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM18 18h3v3h-3z"/></svg>
+          Placas e QR
+        </a>
+        <a class="nav_item" href="#gravar">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+          Gravar tag
+        </a>
+        <a class="nav_item" href="#config">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+          Configurações
+        </a>
+      </div>
+    </nav>
 
   <!-- ===== Conteúdo ===== -->
   <main class="main">
