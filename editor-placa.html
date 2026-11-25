@@ -4,12 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nova placa: Mesa 3 — Toque</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_2.css">
 </head>
 <body>
-<div class="app">
-    <!-- ===== Header ===== -->
-    <div class="app"> <!-- Classe futura para migração para React -->
+  <div class="app">
+    <!-- ===== Menu Superior ===== -->
     <nav class="navigation" aria-label="Menu principal">
       <a class="brand" href="index.html" aria-label="Toque — ir para a página inicial">
         <span class="brand_mark" aria-hidden="true">
@@ -17,8 +16,7 @@
         </span>
         <span class="brand_name">Toque</span>
       </a>
-      
-      <!-- ===== Atributos do SVG é apenas para definir o tamanho da imagem vetorizada e manter a cor não precisa se preocupar em usar ===== -->
+
       <div class="nav">
         <a class="nav_item" href="index.html">
           <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
@@ -43,97 +41,106 @@
       </div>
     </nav>
 
-  <!-- ===== Conteúdo ===== -->
-  <main class="main">
+    <!-- ===== Conteúdo ===== -->
+    <main class="main">
 
-    <header class="page-header">
-      <div class="page-header_titles">
-        <h1>Visão geral</h1>
-        <p class="page-header_sub">Últimos 30 dias · atualizado há 3 min</p>
-      </div>
-      <div class="page-header_actions">
-        <label class="field" for="establishment">Estabelecimento</label>
-        <select class="select" id="establishment" name="establishment">
-          <option>Padaria Bela Vista — Centro</option>
-          <option>Padaria Bela Vista — Shopping</option>
-          <option>Todos os estabelecimentos</option>
-        </select>
-        <a class="btn btn-primary" href="editor-placa.html">
-          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-          Nova placa
-        </a>
-      </div>
-    </header>
+      <header class="page-header">
+        <div class="page-header_titles">
+          <p class="page-header_sub">Padaria Bela Vista — Centro · Placas</p>
+          <h1>Nova placa: Mesa 3</h1>
+        </div>
+        <div class="page-header_actions">
+          <a class="btn" href="#">Salvar rascunho</a>
+          <a class="btn" href="#gravar">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            Gravar tag NFC
+          </a>
+          <a class="btn btn-primary" href="#qr-code">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+            Criar QR Code
+          </a>
+        </div>
+      </header>
 
-    <div class="editor">
-      <div class="editor_left">
-        <form class="card editor_form" action="#" method="post">
+      <div class="editor">
+        <div class="editor_left">
+          <form class="card editor_form" action="#" method="post">
 
-          <div class="field">
-            <label for="nome-placa">Nome da placa</label>
-            <input class="select" type="text" id="nome-placa" name="nome-placa" value="Mesa 3">
-          </div>
+            <div class="field">
+              <label for="nome-placa">Nome da placa</label>
+              <input class="select" type="text" id="nome-placa" name="nome-placa" value="Mesa 3">
+            </div>
 
-          <fieldset class="field">
-            <legend>Modelo</legend>
-            <label><input type="radio" name="modelo" value="mesa" checked> Mesa</label>
-            <label><input type="radio" name="modelo" value="cartao"> Cartão</label>
-            <label><input type="radio" name="modelo" value="adesivo"> Adesivo</label>
-          </fieldset>
+            <fieldset class="field">
+              <legend>Modelo</legend>
+              <label><input type="radio" name="modelo" value="mesa" checked> Mesa</label>
+              <label><input type="radio" name="modelo" value="cartao"> Cartão</label>
+              <label><input type="radio" name="modelo" value="adesivo"> Adesivo</label>
+            </fieldset>
 
-          <div class="field">
-            <label for="texto-principal">Texto principal</label>
-            <input class="select" type="text" id="texto-principal" name="texto-principal" value="Avalie-nos no Google">
-          </div>
+            <div class="field">
+              <label for="texto-principal">Texto principal</label>
+              <input class="select" type="text" id="texto-principal" name="texto-principal" value="Avalie-nos no Google">
+            </div>
 
-          <div class="field">
-            <label for="texto-secundario">Texto secundário</label>
-            <input class="select" type="text" id="texto-secundario" name="texto-secundario" value="Encoste o celular ou escaneie o código">
-          </div>
+            <div class="field">
+              <label for="texto-secundario">Texto secundário</label>
+              <input class="select" type="text" id="texto-secundario" name="texto-secundario" value="Encoste o celular ou escaneie o código">
+            </div>
 
-          <fieldset class="field">
-            <legend>Cor do QR</legend>
-            <label><input type="radio" name="cor-qr" value="preto" checked> Preto</label>
-            <label><input type="radio" name="cor-qr" value="azul"> Azul</label>
-            <label><input type="radio" name="cor-qr" value="verde"> Verde</label>
-            <label><input type="radio" name="cor-qr" value="vermelho"> Vermelho</label>
-          </fieldset>
+            <fieldset class="field">
+              <legend>Cor do QR</legend>
+              <label><input type="radio" name="cor-qr" value="preto" checked> Preto</label>
+              <label><input type="radio" name="cor-qr" value="azul"> Azul</label>
+              <label><input type="radio" name="cor-qr" value="verde"> Verde</label>
+              <label><input type="radio" name="cor-qr" value="vermelho"> Vermelho</label>
+            </fieldset>
 
-          <div class="option">
-            <label><input type="checkbox" name="logo-centro" checked> Logo no centro</label>
-            <small class="field">Ativa correção de erro nível H</small>
-          </div>
+            <div class="option">
+              <label><input type="checkbox" name="logo-centro" checked> Logo no centro</label>
+              <small class="field">Ativa correção de erro nível H</small>
+            </div>
 
-          <div class="option">
-            <label><input type="checkbox" name="selo-nfc" checked> Selo NFC</label>
-            <small class="field">Mostra o ícone de aproximação</small>
-          </div>
-        </form>
+            <div class="option">
+              <label><input type="checkbox" name="selo-nfc" checked> Selo NFC</label>
+              <small class="field">Mostra o ícone de aproximação</small>
+            </div>
+          </form>
 
-        <section class="card" aria-labelledby="titulo-link">
-          <h2 class="card_title" id="titulo-link">Link gravado na placa</h2>
-          <p class="field">QR code</p>
-          <code class="table_mono">lmk.to/bv7k6?x=qr</code>
+          <section class="card" aria-labelledby="titulo-link">
+            <h2 class="card_title" id="titulo-link">Link gravado na placa</h2>
+            <p class="field">QR code</p>
+            <code class="table_mono">lmk.to/bv7k6?x=qr</code>
+          </section>
+        </div>
+
+        <section class="editor_preview" aria-label="Pré-visualização da placa">
+          <figure class="plate">
+            <h2 class="card_title">Avalie-nos no Google</h2>
+            <p class="field">Encoste o celular ou escaneie o código</p>
+
+            <div class="qr-box">
+  <div class="qr-grid">
+    <div class="qr-p"></div><div class="qr-p"></div><div class="qr-p"></div><div class="qr-b"></div><div class="qr-p"></div><div class="qr-p"></div><div class="qr-p"></div>
+    <div class="qr-p"></div><div class="qr-b"></div><div class="qr-p"></div><div class="qr-b"></div><div class="qr-p"></div><div class="qr-b"></div><div class="qr-p"></div>
+    <div class="qr-p"></div><div class="qr-p"></div><div class="qr-p"></div><div class="qr-b"></div><div class="qr-p"></div><div class="qr-p"></div><div class="qr-p"></div>
+    <div class="qr-b"></div><div class="qr-b"></div><div class="qr-b"></div><div class="qr-b"></div><div class="qr-p"></div><div class="qr-b"></div><div class="qr-p"></div>
+    <div class="qr-p"></div><div class="qr-p"></div><div class="qr-p"></div><div class="qr-b"></div><div class="qr-p"></div><div class="qr-p"></div><div class="qr-b"></div>
+    <div class="qr-p"></div><div class="qr-b"></div><div class="qr-p"></div><div class="qr-b"></div><div class="qr-b"></div><div class="qr-p"></div><div class="qr-p"></div>
+    <div class="qr-p"></div><div class="qr-p"></div><div class="qr-p"></div><div class="qr-b"></div><div class="qr-p"></div><div class="qr-b"></div><div class="qr-p"></div>
+  </div>
+</div>
+
+            <p class="field">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 8.5a8 8 0 0 1 12 0"/><path d="M8.5 12a4.5 4.5 0 0 1 7 0"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/></svg>
+              Aproxime o celular aqui
+            </p>
+
+            <code class="table_mono">lmk.to/bv/mx</code>
+          </figure>
         </section>
       </div>
-
-      <section class="editor_preview" aria-label="Pré-visualização da placa">
-        <figure class="plate">
-          <h2 class="card_title">Avalie-nos no Google</h2>
-          <p class="field">Encoste o celular ou escaneie o código</p>
-
-          <img src="qr-mesa3.png" alt="QR code que leva à página de avaliação no Google" width="180" height="180">
-
-          <p class="field">
-            <img src="icone-nfc.svg" alt="" width="16" height="16">
-            Aproxime o celular aqui
-          </p>
-
-          <code class="table_mono">lmk.to/bv/mx</code>
-        </figure>
-      </section>
-    </div>
-  </main>
-</div>
+    </main>
+  </div>
 </body>
 </html>
