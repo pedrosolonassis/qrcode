@@ -26,6 +26,9 @@ Esse projeto visa colaborar com os comércios e estabelecimentos que buscam moni
 -> Acessibilidade geral e facilidade de avaliação;
 -> Origem do acesso do avaliador (balcão e/ou mesa).
 
+### 🤔 O que se diferencia de outras propostas?
+Nosso projeto é para além do QRCode, pois, após o scaneamento, os demais projetos não produzem nada com a informação e não transmitem a efetividade daquela ferramenta. Essa aplicação permite o estabelecimento ter controles dos acessos e avaliações, podendo montar estratégias que tornam a repercussão do local mais eficaz.
+
 ### 📚 Frameworks e Bibliotecas
 -> HTML;  
 -> CSS;  
