@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Visão geral — Toque</title>
-  <link rel="stylesheet" href="style.css" defer>
+  <title>Visão geral — Toca.Ai</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div>
     <!-- ===== Header ===== -->
     <div>
     <nav class="navigation" aria-label="Menu principal">
-      <a class="brand" href="index.html" aria-label="Toque — ir para a página inicial">
+      <a class="brand" href="index.html" aria-label="Toca.Ai — ir para a página inicial">
         <span class="brand_mark" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 8.5a8 8 0 0 1 12 0"/><path d="M8.5 12a4.5 4.5 0 0 1 7 0"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/></svg>
         </span>
-        <span class="brand_name">Toque</span>
+        <span>Toca.Ai</span>
       </a>
       
       <!-- ===== Atributos do SVG é apenas para definir o tamanho da imagem vetorizada e manter a cor não precisa se preocupar em usar ===== -->
@@ -35,7 +35,7 @@
   <main class="main">
 
     <header class="page-header">
-      <div class="page-header_titles">
+      <div>
         <h1>Visão geral</h1>
         <p class="page-header_sub">Últimos 30 dias · atualizado há 3 min</p>
       </div>
@@ -43,8 +43,6 @@
         <label class="field" for="establishment">Estabelecimento</label>
         <select class="select" id="establishment" name="establishment">
           <option>Padaria Bela Vista — Centro</option>
-          <option>Padaria Bela Vista — Shopping</option>
-          <option>Todos os estabelecimentos</option>
         </select>
         <a class="btn btn-primary" href="editor-placa.html">
           <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
@@ -81,9 +79,9 @@
     </section>
 
     <!-- Gráfico com a origem -->
-    <section class="row row-chart">
+    <section class="row-chart">
 
-      <article class="card card-chart">
+      <article class="card">
         <header class="card_head">
           <h2 class="card_title">Toques e scans por dia</h2>
           <ul class="legend">
@@ -119,13 +117,13 @@
       <article class="card card-origin">
         <h2 class="card_title">Origem dos acessos</h2>
 
-        <div class="progress">
+        <div>
           <div class="progress_label"><span>NFC (toque)</span><strong>76%</strong></div>
-          <div class="progress_track"><div class="progress_fill progress_fill-nfc" data-value="76"></div></div>
+          <div class="progress_track"><div class="progress_fill progress_fill-nfc"></div></div>
         </div>
-        <div class="progress">
+        <div>
           <div class="progress_label"><span>QR code</span><strong>24%</strong></div>
-          <div class="progress_track"><div class="progress_fill progress_fill-qr" data-value="24"></div></div>
+          <div class="progress_track"><div class="progress_fill progress_fill-qr"></div></div>
         </div>
 
         <dl class="stats">
@@ -163,7 +161,7 @@
           </thead>
           <tbody>
             <tr>
-              <td class="table_name">Balcão do caixa</td>
+              <td>Balcão do caixa</td>
               <td class="table_mono">lmk.to/bv7k2</td>
               <td class="table_muted">Placa de mesa</td>
               <td class="num">96</td>
@@ -171,7 +169,7 @@
               <td><span class="badge badge-success">Gravada · travada</span></td>
             </tr>
             <tr>
-              <td class="table_name">Mesa 1</td>
+              <td>Mesa 1</td>
               <td class="table_mono">lmk.to/bv7k3</td>
               <td class="table_muted">Adesivo</td>
               <td class="num">44</td>
@@ -179,7 +177,7 @@
               <td><span class="badge badge-success">Gravada · travada</span></td>
             </tr>
             <tr>
-              <td class="table_name">Mesa 2</td>
+              <td>Mesa 2</td>
               <td class="table_mono">lmk.to/bv7k4</td>
               <td class="table_muted">Adesivo</td>
               <td class="num">39</td>
@@ -187,7 +185,7 @@
               <td><span class="badge badge-success">Gravada · travada</span></td>
             </tr>
             <tr>
-              <td class="table_name">Cartão do entregador</td>
+              <td>Cartão do entregador</td>
               <td class="table_mono">lmk.to/bv7k5</td>
               <td class="table_muted">Cartão</td>
               <td class="num">—</td>

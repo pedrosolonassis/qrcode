@@ -1,196 +1,226 @@
-/* base */
-* { 
-    box-sizing: border-box; 
+/* =========================================================
+   style.css — folha única do projeto (index.html e editor-placa.html)
+   1. Base
+   2. Menu superior
+   3. Cabeçalho da página e controles comuns (field, select, btn)
+   4. Cards
+   5. Visão geral: indicadores, gráfico, acessos, tabela
+   6. Editor de placa: formulário, link, pré-visualização, modelos
+   ========================================================= */
+
+/* ===== 1. Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
     font-family: Inter, system-ui, sans-serif;
-    font-size: 14px; 
+    font-size: 14px;
     color: #0F172A;
     background: #F1F5F9;
 }
 
-h1, h2, p, dl, dd, ul { 
-    margin: 0; 
-}
-
-/* conteudo */
-.main {
-    max-width: 1100px; 
-    margin: 0 auto;
-    padding: 24px;
-    display: flex; flex-direction: column; gap: 24px;
-}
-
-/* menu topo */
+/* ===== 2. Menu superior ===== */
 .navigation {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     gap: 32px;
     padding: 12px 24px;
-    background: #FFFFFF; 
+    background: #FFFFFF;
     border-bottom: 1px solid #E2E8F0;
 }
 
 .brand, .nav_item {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     gap: 8px;
     text-decoration: none;
 }
 
-.brand { 
-    color: #0F172A; 
-    font-weight: 700; 
+.brand {
+    color: #0F172A;
+    font-size: 16px;
+    font-weight: 700;
 }
 
-.brand_mark { 
-    display: flex; 
-    color: #0F766E; 
+.brand_mark {
+    display: flex;
+    color: #0F766E;
 }
 
-.nav { 
-    display: flex; 
-    gap: 8px; 
+.nav {
+    display: flex;
+    gap: 8px;
 }
 
-.nav_item { 
-    padding: 8px 14px; 
-    border-radius: 999px; 
-    color: #64748B; 
+.nav_item {
+    padding: 8px 14px;
+    border-radius: 999px;
+    color: #64748B;
 }
 
-/* cabeçalho */
-.page-header { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+.nav_item:hover {
+    background: #F1F5F9;
+    color: #0F766E;
 }
 
-.page-header h1 { 
-    font-size: 24px; 
+/* ===== 3. Cabeçalho da página e controles comuns ===== */
+.main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.page-header_sub { 
-    color: #64748B; 
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.page-header_actions { 
-    display: flex; 
-    align-items: center; 
-    gap: 8px; 
+.page-header h1 {
+    font-size: 24px;
 }
 
-.field { 
-    font-size: 12px; 
-    color: #64748B; 
+.page-header_sub {
+    color: #64748B;
+}
+
+.page-header_actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.field {
+    font-size: 12px;
+    color: #64748B;
 }
 
 .select {
-    height: 40px; 
+    height: 40px;
     padding: 0 12px;
-    border: 1px solid #E2E8F0; 
+    border: 1px solid #E2E8F0;
     border-radius: 8px;
     background: #FFFFFF;
+    color: #0F172A;
+    font-size: 14px;
 }
 
 .btn {
-    display: flex; 
-    align-items: center; 
+    display: inline-flex;
+    align-items: center;
     gap: 8px;
-    height: 40px; 
-    padding: 0 16px; 
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid #E2E8F0;
     border-radius: 8px;
-    text-decoration: none; 
+    background: #FFFFFF;
+    color: #0F172A;
+    font-size: 14px;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .btn-primary {
     background: #0F766E;
-    color: #FFFFFF; 
+    border-color: #0F766E;
+    color: #FFFFFF;
 }
 
-.btn-primary:hover { 
-    background: #115E59; 
+.btn-primary:hover {
+    background: #115E59;
 }
 
-/* cards */
-.card { 
-    padding: 20px; 
-    background: #FFFFFF; 
-    border: 1px solid #E2E8F0; 
-    border-radius: 16px; 
+/* Elementos com o atributo hidden ficam escondidos (tbody da tabela e selo NFC da prévia) */
+[hidden] {
+    display: none !important;
 }
 
-.card_title { 
+/* ===== 4. Cards ===== */
+.card {
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+}
+
+.card_title {
     font-size: 16px;
-    font-weight: 600; 
+    font-weight: 600;
 }
 
-/* cards topo */
-section.graph { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 16px; 
-}
-.graph_label { 
-    color: #64748B; 
+/* ===== 5. Visão geral ===== */
+
+/* indicadores do topo */
+section.graph {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
 }
 
-.graph_value { 
-    display: flex; 
-    align-items: center; 
-    gap: 8px; 
-    font-size: 32px; 
-    font-weight: 700; 
+.graph_label {
+    color: #64748B;
 }
 
-.graph_delta { 
-    font-size: 12px; 
-    color: #15803D; 
+.graph_value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 32px;
+    font-weight: 700;
 }
 
-.graph_star { 
-    fill: #F59E0B; 
+.graph_delta {
+    font-size: 12px;
+    color: #15803D;
 }
 
-/* 7. grafico */
-.row-chart { 
-    display: grid; 
-    grid-template-columns: 2fr 1fr; 
-    gap: 16px; 
+.graph_star {
+    fill: #F59E0B;
 }
 
-.card_head { 
-    display: flex; 
-    justify-content: space-between; 
+/* gráfico */
+.row-chart {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
 }
 
-.legend { 
-    display: flex; gap: 16px; 
-    padding: 0; 
-    list-style: none; 
+.card_head {
+    display: flex;
+    justify-content: space-between;
 }
 
-.legend_item::before { 
-    content: ""; 
-    display: inline-block; 
-    width: 12px; 
-    height: 12px; 
-    margin-right: 6px; 
+.legend {
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    list-style: none;
 }
 
-.legend_item-nfc::before { 
-    background: #0F766E; 
+.legend_item::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
 }
 
-.legend_item-qr::before { 
-    background: #5EEAD4; 
+.legend_item-nfc::before {
+    background: #0F766E;
+}
+
+.legend_item-qr::before {
+    background: #5EEAD4;
 }
 
 .bars {
-    display: flex; 
+    display: flex;
     gap: 10px;
     height: 180px;
     margin-top: 24px;
@@ -198,171 +228,444 @@ section.graph {
 }
 
 .bar {
-    flex: 1; 
+    flex: 1;
     height: 100%;
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     gap: 2px;
 }
 
-.bar_nfc, .bar_qr { 
-    display: block; 
-    border-radius: 3px; 
+.bar_nfc, .bar_qr {
+    display: block;
+    border-radius: 3px;
 }
 
-.bar_nfc { 
-    background: #0F766E; 
+.bar_nfc {
+    background: #0F766E;
 }
 
-.bar_qr { 
-    height: 12%; 
-    background: #5EEAD4; 
+.bar_qr {
+    height: 12%;
+    background: #5EEAD4;
 }
 
-.bar:nth-child(odd) .bar_nfc { 
-    height: 40%; 
+.bar:nth-child(odd) .bar_nfc {
+    height: 40%;
 }
 
-.bar:nth-child(even) .bar_nfc { 
-    height: 60%; 
+.bar:nth-child(even) .bar_nfc {
+    height: 60%;
 }
 
-.bar:nth-child(3n) .bar_nfc { 
-    height: 75%; 
+.bar:nth-child(3n) .bar_nfc {
+    height: 75%;
 }
 
-.bar:last-child .bar_nfc { 
-    height: 85%; 
+.bar:last-child .bar_nfc {
+    height: 85%;
 }
 
-.axis { 
+
+.axis {
     display: flex;
     justify-content: space-between;
-    margin-top: 8px; 
-    font-size: 12px; 
-    color: #64748B; 
+    margin-top: 8px;
+    font-size: 12px;
+    color: #64748B;
 }
 
-/* 8. acessos */
-.card-origin { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 16px; 
+/* origem dos acessos */
+.card-origin {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.progress_label { 
-    display: flex; 
-    justify-content: space-between; 
-    margin-bottom: 6px; 
+.progress_label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
 }
 
-.progress_track { 
-    height: 8px; 
-    border-radius: 4px; 
-    background: #E2E8F0; 
+.progress_track {
+    height: 8px;
+    border-radius: 4px;
+    background: #E2E8F0;
 }
 
-.progress_fill { 
-    height: 100%; 
-    border-radius: 4px; 
+.progress_fill {
+    height: 100%;
+    border-radius: 4px;
 }
 
-.progress_fill-nfc { 
-    width: 76%; 
-    background: #0F766E; 
+.progress_fill-nfc {
+    width: 76%;
+    background: #0F766E;
 }
 
-.progress_fill-qr { 
-    width: 24%; 
-    background: #5EEAD4; 
+.progress_fill-qr {
+    width: 24%;
+    background: #5EEAD4;
 }
 
 .stats {
-    display: flex; 
-    flex-direction: column; gap: 16px;
-    padding-top: 16px; 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 16px;
     border-top: 1px solid #E2E8F0;
 }
 
-.stat dt { 
-    color: #64748B; 
+.stat dt {
+    color: #64748B;
 }
 
-.stat dd { 
-    margin-top: 4px; 
-    font-weight: 600; 
+.stat dd {
+    margin-top: 4px;
+    font-weight: 600;
 }
 
-.stat .stat_detail { 
-    font-weight: 400; 
-    color: #64748B; 
+.stat .stat_detail {
+    font-weight: 400;
+    color: #64748B;
 }
 
-/* 9. tabela */
-.table-card { 
-    padding: 0; 
-    overflow: hidden; 
+/* tabela de placas */
+.table-card {
+    padding: 0;
+    overflow: hidden;
 }
 
-.table-card_head { 
-    display: flex; 
-    justify-content: space-between; 
-    padding: 16px 24px; 
+.table-card_head {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
 }
 
-.table-card_link { 
-    color: #0F766E; 
-    text-decoration: none; 
+.table-card_link {
+    color: #0F766E;
+    text-decoration: none;
 }
 
-.table-scroll { 
-    overflow-x: auto; 
+.table-scroll {
+    overflow-x: auto;
 }
 
-.table { 
-    width: 100%; 
+.table {
+    width: 100%;
     min-width: 720px;
     border-collapse: collapse;
     text-align: left;
 }
 
-.table th { 
-    padding: 10px 24px; 
-    color: #64748B; 
+.table th {
+    padding: 10px 24px;
+    color: #64748B;
 }
 
-.table td { 
-    padding: 14px 24px; 
-    border-top: 1px solid #E2E8F0; 
+.table td {
+    padding: 14px 24px;
+    border-top: 1px solid #E2E8F0;
 }
 
-.table .num { 
-    text-align: right; 
+.table .num {
+    text-align: right;
 }
 
-.table_mono { 
-    font-family: monospace; 
+.table_mono {
+    font-family: monospace;
 }
 
-.table_muted { 
-    color: #64748B; 
+.table_muted {
+    color: #64748B;
 }
 
-.badge { 
-    display: inline-block; 
-    padding: 3px 10px; 
-    border-radius: 999px; 
-    font-size: 12px; 
-    text-decoration: none; 
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    text-decoration: none;
 }
 
-.badge-success { 
-    background: #DCFCE7; 
-    color: #166534; 
+.badge-success {
+    background: #DCFCE7;
+    color: #166534;
 }
 
-.badge-warning { 
-    background: #FEF3C7; 
-    color: #92400E; 
+.badge-warning {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+/* ===== 6. Editor de placa ===== */
+
+/* estrutura em 2 colunas */
+.editor {
+    display: grid;
+    grid-template-columns: 48% 50%;
+    column-gap: 2%;
+    align-items: flex-start;
+}
+
+.editor_left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.editor .card_title {
+    margin-bottom: 8px;
+}
+
+/* formulário */
+.editor_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.editor .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.editor .field label {
+    font-size: 13px;
+    color: #0F172A;
+    margin-bottom: 6px;
+}
+
+.editor_form .select {
+    width: 100%;
+}
+
+/* opções de modelo e cor do QR lado a lado */
+.editor fieldset.field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 8px;
+    border: none;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.editor fieldset.field legend {
+    font-size: 13px;
+    color: #0F172A;
+    margin-bottom: 6px;
+}
+
+.editor fieldset.field label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #0F172A;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.editor fieldset.field input {
+    margin-right: 6px;
+}
+
+/* checkboxes (logo no centro e selo NFC) */
+.option {
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+    margin-top: 12px;
+    border-top: 1px solid #E2E8F0;
+}
+
+.option label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    color: #0F172A;
+    margin-bottom: 4px;
+}
+
+.option input {
+    margin-right: 8px;
+}
+
+.option small.field {
+    padding-left: 22px;
+    font-size: 12px;
+    color: #64748B;
+    margin-bottom: 0;
+}
+
+/* botão de envio dentro do formulário */
+.form_actions {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 16px;
+    margin-top: 12px;
+    border-top: 1px solid #E2E8F0;
+}
+
+.form_actions .btn {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* card de link gravado */
+.editor_left .table_mono {
+    display: block;
+    background: #F1F5F9;
+    color: #0F766E;
+    padding: 10px 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+/* pré-visualização */
+.editor_preview {
+    background: #E2E8F0;
+    border-radius: 16px;
+    padding: 40px;
+    height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plate {
+    width: 280px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 32px 24px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.plate .card_title {
+    font-size: 18px;
+    color: #0F172A;
+    margin-bottom: 6px;
+}
+
+.plate p.field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #64748B;
+    margin-bottom: 12px;
+}
+
+.plate .table_mono {
+    font-size: 12px;
+    color: #64748B;
+}
+
+/* moldura e QR simplificado */
+.qr-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    border: 2px solid #0F766E;
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.qr-grid {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    width: 168px;
+    height: 168px;
+}
+
+.qr-p {
+    background: #0F172A;
+}
+
+.qr-b {
+    background: #FFFFFF;
+}
+
+/* modelos da placa (classe trocada pelo script.js) */
+
+/* mesa: é o padrão definido em .plate, nada a sobrescrever */
+
+/* cartão: formato horizontal, texto à esquerda e QR à direita */
+.plate--cartao {
+    width: 360px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 16px;
+    align-items: center;
+    padding: 20px 22px;
+    text-align: left;
+}
+
+.plate--cartao > * {
+    grid-column: 1;
+}
+
+.plate--cartao .qr-box {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    margin: 0;
+}
+
+.plate--cartao .qr-grid {
+    width: 126px;
+    height: 126px;
+}
+
+.plate--cartao p.field {
+    justify-content: flex-start;
+}
+
+/* adesivo: formato redondo, só título, QR e selo NFC */
+.plate--adesivo {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 6px solid #0F766E;
+    padding: 24px;
+    justify-content: center;
+}
+
+.plate--adesivo .card_title {
+    font-size: 14px;
+}
+
+.plate--adesivo #preview-subtitulo,
+.plate--adesivo .table_mono {
+    display: none;
+}
+
+.plate--adesivo .qr-box {
+    border: none;
+    padding: 6px;
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+
+.plate--adesivo .qr-grid {
+    width: 112px;
+    height: 112px;
 }

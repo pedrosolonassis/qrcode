@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nova placa: Mesa 3 — Toque</title>
-  <link rel="stylesheet" href="style_2.css">
+  <title>Nova placa: Mesa 3 — Toca.Ai</title>
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <div>
     <!-- ===== Menu Superior ===== -->
     <nav class="navigation" aria-label="Menu principal">
-      <a class="brand" href="index.html" aria-label="Toque — ir para a página inicial">
+      <a class="brand" href="index.html" aria-label="Toca.Ai — ir para a página inicial">
         <span class="brand_mark" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 8.5a8 8 0 0 1 12 0"/><path d="M8.5 12a4.5 4.5 0 0 1 7 0"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/></svg>
         </span>
-        <span class="brand_name">Toque</span>
+        <span>Toca.Ai</span>
       </a>
 
       <div class="nav">
@@ -34,9 +34,9 @@
     <main class="main">
 
       <header class="page-header">
-        <div class="page-header_titles">
+        <div>
           <p class="page-header_sub">Padaria Bela Vista — Centro · Placas</p>
-          <h1>Nova placa: Mesa 3</h1>
+          <h1>Nova placa: <span id="titulo-nome">Mesa 3</span></h1>
         </div>
         <div class="page-header_actions">
           <a class="btn" href="#">Salvar rascunho</a>
@@ -44,20 +44,17 @@
             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
             Gravar tag NFC
           </a>
-          <a class="btn btn-primary" href="#qr-code">
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
-            Criar QR Code
-          </a>
         </div>
       </header>
 
       <div class="editor">
         <div class="editor_left">
-          <form class="card editor_form" action="#" method="post">
+          <!-- novalidate: a validação fica por conta do script.js (evento submit) -->
+          <form class="card editor_form" id="form-placa" action="#" method="post" novalidate>
 
             <div class="field">
               <label for="nome-placa">Nome da placa</label>
-              <input class="select" type="text" id="nome-placa" name="nome-placa" value="Mesa 3" required>
+              <input class="select" type="text" id="nome-placa" name="nome-placa" placeholder="Mesa 3" required>
             </div>
 
             <fieldset class="field">
@@ -69,12 +66,12 @@
 
             <div class="field">
               <label for="texto-principal">Texto principal</label>
-              <input class="select" type="text" id="texto-principal" name="texto-principal" value="Avalie-nos no Google" required>
+              <input class="select" type="text" id="texto-principal" name="texto-principal" placeholder="Avalie-nos no Google" required>
             </div>
 
             <div class="field">
               <label for="texto-secundario">Texto secundário</label>
-              <input class="select" type="text" id="texto-secundario" name="texto-secundario" value="Encoste o celular ou escaneie o código" required>
+              <input class="select" type="text" id="texto-secundario" name="texto-secundario" placeholder="Encoste o celular ou escaneie o código" required>
             </div>
 
             <fieldset class="field">
@@ -94,6 +91,14 @@
               <label><input type="checkbox" name="selo-nfc" checked> Selo NFC</label>
               <small class="field">Mostra o ícone de aproximação</small>
             </div>
+
+            <!-- Botão de envio dentro do form: dispara o evento submit e a validação do script.js -->
+            <div class="form_actions">
+              <button class="btn btn-primary" type="submit">
+                <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                Criar QR Code
+              </button>
+            </div>
           </form>
 
           <section class="card" aria-labelledby="titulo-link">
@@ -104,9 +109,10 @@
         </div>
 
         <section class="editor_preview" aria-label="Pré-visualização da placa">
-          <figure class="plate">
-            <h2 class="card_title">Avalie-nos no Google</h2>
-            <p class="field">Encoste o celular ou escaneie o código</p>
+          <!-- A classe plate--mesa | plate--cartao | plate--adesivo é trocada pelo script.js -->
+          <figure class="plate plate--mesa" id="placa-preview">
+            <h2 class="card_title" id="preview-titulo">Avalie-nos no Google</h2>
+            <p class="field" id="preview-subtitulo">Encoste o celular ou escaneie o código</p>
 
             <div class="qr-box">
   <div class="qr-grid">
@@ -120,7 +126,7 @@
   </div>
 </div>
 
-            <p class="field">
+            <p class="field" id="preview-nfc">
               <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 8.5a8 8 0 0 1 12 0"/><path d="M8.5 12a4.5 4.5 0 0 1 7 0"/><circle cx="12" cy="15.5" r="1" fill="currentColor"/></svg>
               Aproxime o celular aqui
             </p>
